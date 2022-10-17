@@ -18,10 +18,6 @@ class Queue {
     this.head = null;
   }
 
-  getUnderlyingList() {
-    return this.head;
-  }
-
   enqueue(value) {
     if (!this.head) {
       this.head = new ListNode(value);
@@ -40,7 +36,13 @@ class Queue {
     this.head = temp;
     return res;
   }
+  
+  getUnderlyingList() {
+    return this.head;
+  }
+
 }
+
 
 module.exports = {
   Queue,
